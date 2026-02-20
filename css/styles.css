@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    overflow-x: hidden;
+    
+}
+.header{
+    width: 100vw;
+    height: 100px;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background-color: rgb(245, 245, 242);
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(62, 55, 55);
+    align-items: center;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 80px;
+    height: 60px;
+}
+.username{
+    width: 120px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #ebf5ff;
+    display: flex;
+    color: #0088ff;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0088ff;
+}
+.hero{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+}
+.left{
+    flex-basis: 50%;
+    height:auto;
+    display: flex;
+    padding: 50px;
+    margin-left: 50px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    
+}
+.highlight{
+    color: #0088ff;
+}
+.book{
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    align-self: flex-start;
+    border: none;
+    margin-top: 18px;
+    background-color: #0088ff;
+    color: white;
+    font-size: 14px;
+}
+@media (max-width:740px) {
+    .hero{
+        flex-direction: column;
+        height: 100vh;
+    
+    }
+    .left{
+        margin-left: 0;
+    }
+    ul{
+        gap:10px;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+}
+.right{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_img{
+    object-fit: contain;
+    max-width: 400px;
+
+}
+.hero-sec{
+    display: flex;
+    flex-direction: column;
+   
+}
+.hero-footer{
+    padding: 30px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-around;
+    background-color: #0088ffbb;
+}
+
+@media(max-width:640px){
+    .hero-footer{
+        flex-direction: column;
+        margin-top: 60px;
+        text-align: center;
+        gap: 10px;
+        border-top-left-radius: 30px;
+    }
+    .left{
+        margin-top:40px;
+    }
+    .star{
+    font-size: 40px;
+    margin:0;
+    display: flex;
+    transform: translate(-50%,-50%);
+    animation: big-small 2s infinite linear;
+    animation-timing-function: forwards;
+   
+}
+ @keyframes big-small {
+        0%,100%{
+            transform: scale(1);
+            
+               }
+         50%{
+            transform: scale(2);
+         }      
+    }
+}
+
+    .star{
+    display: none;
+    }
+.section-2{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #e5e9ec;
+    padding: 10px;
+}
+.services,.item-text{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.services{
+    margin: 15px;
+}
+.service{
+    margin: 50px 10px ;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    flex-basis: 60%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.item .addButton{
+    background-color: rgba(136, 211, 136, 0.171);
+    padding: 20px;
+    color: green;
+    min-width: 120px;
+    max-height: 50px;
+    font-weight: 500;
+    border:none;
+    border-radius: 20px;
+    min-width: 120px;
+    max-width: 150px;
+}
+.item h3{
+    font-size: 18px;
+    font-weight: 200;
+}
+.item .removeButton{
+    background-color: rgba(211, 136, 136, 0.171);
+    padding: 20px;
+    color: rgb(128, 0, 0);
+    min-width: 120px;
+    max-width: 150px;
+    max-height: 50px;
+    font-weight: 500;
+    border:none;
+    border-radius: 20px;
+}
+.col{
+    
+    flex-basis: 30%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: 95%;
+    padding: 10px;
+    flex-direction: column;
+    gap:10px;
+    height: 590px;
+    
+}
+
+.checkout table{
+    width: 100%;
+   
+  
+    border-collapse: collapse;
+}
+.tablemainrow{
+    background-color: #5555553b;
+}
+.col{
+      border-radius: 20px;
+}
+@media (max-width:960px){
+    .section-2{
+        flex-direction: column;
+        margin: 0;
+        max-width: 98vw;
+        
+    }
+    .item-text{
+        flex-direction: column;
+    }
+    .col{
+        width: 70%;
+        margin-top:0;
+        gap:50px;
+    }
+}
+@media(max-width:640px){
+    .col{
+        width: 100%;
+        margin: 0;
+
+    }
+}
+.col1,.col2{
+    height: 50%;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.col1 table tr{
+    height: 40px;
+    border-bottom: 1px solid #555;
+}
+.total{
+    display: flex;
+    
+    justify-content: space-between;
+    padding:10px;
+}
+.booking-input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.checkout{
+    overflow-y:auto;
+    max-height: 200px;
+}
+.none{
+    display: none;
+}
+.booking-input input{
+    padding: 5px;
+    border-radius: 30px;
+    width: 170px;
+    margin:10px;
+}
+.booking-input button{
+    width: 150px;
+    align-self: center;
+    height: 50px;
+    font-size: 20px;
+    
+  
+    border-radius: 10px;
+    background:linear-gradient(135deg,#0088ff,#07aeba);
+    color: white;
+    border: none;
+
+}
+
+.endingpage{
+    display: grid;
+    margin:20px;
+    height: 100vh;
+    gap: 20px;
+    grid-template-rows: 1.5fr 1fr 1.5fr;
+}
+.part1,.part2,.part3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+.event1,.event2,.event3,.event4{
+    max-width: 300px;
+    max-height: 300px;
+}
+.part2{
+    background-color: #0088ff;
+    gap: 10px;
+}
+.part2 input,button{
+    height: 30px;
+    width: 200px;
+    padding: 20px;
+}
+@media (max-width:740px) {
+    .part1,.event1,.part2,.event2,.event3,.event4,.part3{
+         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+    }
+    .part2{
+        padding: 20px;
+    }
+}
+.part2 input{
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+}
+.part2 button{
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 300;
+}

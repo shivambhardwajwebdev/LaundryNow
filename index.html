@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="img/2-logo.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>SERVICES</li>
+                <li>ABOUT US</li>
+                <li>CONTACT US</li>
+            </ul>
+        </nav>
+        <div class="username"><h3>Shivam</h3></div>
+    </div>
+    <div class="hero-sec">
+    <div class="hero">
+        <div class="left">
+            <h1 class="normalh1">Revitalize Your Clothes with Expert</h1>
+            <h1 class="highlight">Laundry Services!</h1>
+            <p>From premium dry cleaning to swift wash and fold,we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!</p>
+            <button class="book">Book a Service today!</button>
+        </div>
+        <div class="right">
+            <img src="img/2-home.png" alt="home" class="home_img">
+        </div>
+        </div>
+
+        <div class="hero-footer">
+            <span class="star">✨</span>
+            <h1>Our Achievements</h1>
+            <div class="hero-box-1">
+                <h2>15+</h2>
+                <p>Laundry Services</p>
+            </div>
+            <div class="hero-box-2">
+                <h2>240+</h2>
+                <p>Happy Customers</p>
+            </div>
+            <div class="hero-box-3">
+                <h2>2+ Yrs</h2>
+                <p>Experience</p>
+            </div>
+    </div>
+    <div class="section-2">
+        
+       <div class="service">
+        <div class="row">
+            <div class="div1"><h1>Our Services</h1><br>
+            <p>Click On The Add To Cart Button To Add The Services To Your Cart</p><br>
+        <hr>
+        <div class="services">
+            <img src="img/service1.png" alt="" width="30px" height="30px">
+            <div class="item" id="item1">
+                <div class="item-text">
+                    <h3>Dry Cleaning</h3>
+                    <span>&#8377; 200</span>
+                </div>    
+                <button class="addButton" onclick="onaddToCart(1)">Add To Cart <i class="fas fa-circle-plus"></i>
+ </button><button class="removeButton none" onclick="onRemoveFromCart(1)">Remove from Cart <i class="fas fa-circle-minus"></i>
+ </button>
+            </div>
+        </div>
+        <div class="services">
+            <img src="img/service2.png" alt="" width="30px" height="30px">
+            <div class="item" id="item2">
+                <div class="item-text">
+                    <h3>Wash & Fold</h3>
+                    <span>&#8377; 100</span>
+                </div>    
+                 <button class="addButton" onclick="onaddToCart(2)">Add To Cart <i class="fas fa-circle-plus"></i>
+ </button><button class="removeButton none" onclick="onRemoveFromCart(2)">Remove from Cart <i class="fas fa-circle-minus"></i>
+ </button>
+            </div>
+        </div>
+        <div class="services">
+            <img src="img/service3.png" alt="" width="30px" height="30px">
+            <div class="item" id="item3">
+                <div class="item-text">
+                    <h3>Ironing</h3>
+                    <span>&#8377; 30</span>
+                </div>    
+                 <button class="addButton" onclick="onaddToCart(3)">Add To Cart <i class="fas fa-circle-plus"></i></button>
+                 <button class="removeButton none" onclick="onRemoveFromCart(3)">Remove from Cart <i class="fas fa-circle-minus"></i>
+ </button>
+            </div>
+        </div>
+        <div class="services">
+            <img src="img/service4.png" alt="" width="30px" height="30px">
+            <div class="item" id="item4"> 
+                <div class="item-text">
+                    <h3>Stain Removal</h3>
+                    <span>&#8377; 500</span>
+                </div>    
+                 <button class="addButton" onclick="onaddToCart(4)" >Add To Cart <i class="fas fa-circle-plus"></i> </button>
+                 <button class="removeButton none" onclick="onRemoveFromCart(4)">Remove from Cart <i class="fas fa-circle-minus"></i>
+ </button>
+            </div>
+        </div>
+        <div class="services">
+           <img src="img/service5.png" alt="" width="30px" height="30px">
+            <div class="item" id="item5">
+                <div class="item-text">
+                    <h3>Leather & Suede Cleaning</h3>
+                    <span>&#8377; 999</span>
+                </div>    
+                 <button class="addButton" onclick="onaddToCart(5)">Add To Cart <i class="fas fa-circle-plus"></i></button>
+                 <button class="removeButton none" onclick="onRemoveFromCart(5)">Remove from Cart <i class="fas fa-circle-minus"></i>
+ </button>
+            </div>
+        </div>
+        <div class="services">
+            <img src="img/service6.png" alt="" width="30px" height="30px">
+            <div class="item" id="item6">
+                <div class="item-text">
+                    <h3>Wedding Dress Cleaning</h3>
+                    <span>&#8377; 2800</span>
+                </div>    
+                 <button class="addButton" onclick="onaddToCart(6)">Add To Cart <i class="fas fa-circle-plus"></i>             
+ </button><button class="removeButton none" onclick="onRemoveFromCart(6)">Remove from Cart <i class="fas fa-circle-minus"></i>
+ </button>
+            </div>
+        </div>
+       </div>
+        </div>
+            <hr><br>
+            <p><span>&#9432;</span>Add the items to the cart and book Now</p> 
+            <br>
+        </div>
+        <div class="col">
+            <div class="col1"><div class="checkout"><h1>Added Items</h1>
+            <table class="cartTable" cellpadding="5" >
+            <tr class="tablemainrow" >
+                <th>S.no</th>
+                <th>Services</th>
+                <th>Price (&#8377;)</th>
+            </tr>
+                <!-- <td>1</td>
+                <td>Ironing and Folding</td>
+                <td>&#8377;30</td> -->
+            
+             <!-- <tr>
+                <td>2</td>
+                <td>Dry cleaning</td>
+                <td>&#8377;200</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Stain Removal</td>
+                <td>&#8377;500</td>
+            </tr> -->
+            </table>
+            </div>
+            <div class="total">
+            <h3>Total Amount</h3>
+            <p class="totalAmountofCart">&#8377;730</p>
+            </div></div>
+    
+        <div class="col2">
+            <h3>Book Now</h3>
+            <div class="booking-input">
+            <form id="contact-me">
+             
+            <label>Full Name</label>
+            <input type="text" name="name" id="Username" placeholder="Enter FUll Name" required> 
+            <br>
+            <label>Email ID</label>
+            <input type="email" placeholder="example@gmail.com" name="email" id="Email" required><br>
+            <label>Mobile No</label> 
+            <input type="number" placeholder="99999XXXXX" name="number" id="mobile" required>
+            <input class="listitem" style="display: none;" name="listitem" id="listitem" readonly>
+            <br>
+            <button type="submit" class="BookingButton">Book Now</button>
+
+            </form>
+            <div class="status"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <section class="endingpage">
+        <div class="part1">
+            <div class="event1">
+                <img src="img/event1.png" alt="" width="100px">
+                <h3>Premium Services</h3>
+                <p>Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new</p>
+            </div>
+            <div class="event2">
+                <img src="img/event2.png" alt="" width="100px">
+                <h3>Quick Support</h3>
+                <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+            </div>
+            <div class="event3">
+                <img src="img/event3.png" alt="" width="100px">
+                <h3>Hassle Free Delivery</h3>
+                <p>Enjoy seamless service with our convenient pickup and delivery optional tailored to your schedule.</p>
+            </div>
+            <div class="event4">
+                <img src="img/event4.png" alt="" width="100px">
+                <h3>Affordable Prices</h3>
+                <p>Experience exceptional care without breaking the bank-Our affordable prices make laundry day stres-free.</p>
+            </div>
+        </div>
+        <div class="part2"><h1>Subscribe to our Newsletter.</h1>
+        <input type="text" placeholder="Full Name"><input placeholder="Email" type="text"><button >Subscribe</button></div>
+        <div class="part3">
+            <div class="event1"><img src="img/2-logo.png" alt="logo" width="200px">
+            <h2>About Us</h2><p>Lorem ipsum dolor sit delectus veniam odit. Quia blanditiis id cum nobis aliquid?</p></div>
+            <div class="event2"><h2>Important links</h2><p>About us</p>
+            <p>Contact Us</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+            <p>Refund Policy</p>
+        
+        </div>
+            <div class="event3"><h2>Contact</h2>
+            <p>shiva.bhardwaj.mks@gmail.com</p><p>9999343434</p></div>
+            <div class="event4"><h2>Follow Us</h2><img src="img/footer.png" alt="social media" width="100px">
+            </div>
+        </div>
+    </section>
+    <script>
+const table = document.querySelector(".cartTable");
+const amount=document.querySelector(".totalAmountofCart");
+const addButton=document.querySelectorAll(".addButton");
+const removeButton=document.querySelectorAll(".removeButton");
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let nextid = cart.length > 0 ? cart[cart.length - 1][0] + 1 : 1;
+window.onload = function () {
+    cart.forEach(item => addToTable(item));
+};
+
+function checkrejected(){
+    cart.forEach(data=>{
+        if(data[2]==200){
+    addButton[0].classList.add("none");
+    removeButton[0].classList.remove("none");
+        }if(data[2]==100){
+    addButton[1].classList.add("none");
+    removeButton[1].classList.remove("none");
+    }if(data[2]==30){
+    addButton[2].classList.add("none");
+    removeButton[2].classList.remove("none");
+    }if(data[2]==500){
+    addButton[3].classList.add("none");
+    removeButton[3].classList.remove("none");
+    }if(data[2]==999){
+    addButton[4].classList.add("none");
+    removeButton[4].classList.remove("none");
+    }if(data[2]==2800){
+    addButton[5].classList.add("none");
+    removeButton[5].classList.remove("none");
+        }
+    })
+}
+checkrejected();
+function totalAmount(cart){
+    let total = 0;
+    cart.forEach(data=>{
+         total = total + data[2];
+    })
+    amount.innerText=`₹ ${total}`;
+}
+totalAmount(cart);
+function addToTable(rowData) {
+    const row = document.createElement("tr");
+    rowData.forEach(data => {
+        const td = document.createElement("td");
+        td.textContent = data;
+        row.appendChild(td);
+    });
+
+    table.appendChild(row);
+    
+    totalAmount(cart);
+    
+    
+}
+
+function addToCart(rowData) {
+    cart.push(rowData);
+
+    // Save to localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    addToTable(rowData);
+}
+
+const onaddToCart = (number) => {
+    let item;
+
+    if (number == 1) {
+        item = [nextid, "Dry Cleaning", 200];
+    }
+    else if (number == 2) {
+        item = [nextid, "Wash & Fold", 100];
+    }
+    else if (number == 3) {
+        item = [nextid, "Ironing", 30];
+    }
+    else if (number == 4) {
+        item = [nextid, "Stain Removal", 500];
+    }
+    else if (number == 5) {
+        item = [nextid, "Leather & Suede Cleaning", 999];
+    }
+    else {
+        item = [nextid, "Wedding Dress Cleaning", 2800];
+    }
+    let index=number-1;
+    addButton[index].classList.add("none");
+    removeButton[index].classList.remove("none");
+    addToCart(item);
+    nextid++;
+};
+const onRemoveFromCart = (number) => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (number == 1) {
+        newcart = cart.filter(item => item[2] !== 200);
+
+    }
+    else if (number == 2) {
+        newcart = cart.filter(item => item[2] !== 100);
+
+    }
+    else if (number == 3) {
+        newcart = cart.filter(item => item[2] !== 30);
+
+    }
+    else if (number == 4) {
+        newcart = cart.filter(item => item[2] !== 500);
+
+    }
+    else if (number == 5) {
+        newcart = cart.filter(item => item[2] !== 999);
+
+    }
+    else {
+       newcart = cart.filter(item => item[2] !== 2800);
+
+    }
+    let index=number-1;
+    addButton[index].classList.remove("none");
+    removeButton[index].classList.add("none");
+    localStorage.removeItem("cart");
+
+    localStorage.setItem("cart", JSON.stringify(newcart));
+    location.reload();
+
+};
+
+const list_items=document.querySelector(".list-items");
+listitem.value=JSON.stringify(cart);
+
+    </script>
+    <!-- //for receiving email using EmailJs -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "K7wGkytqu6FhOa-Ah",
+      });
+   })();
+const status =document.getElementsByClassName("status");
+document.getElementById("contact-me").addEventListener("submit", function(e) {
+e.preventDefault();
+
+
+emailjs.sendForm("service_fmaa7vq", "template_apv3g1h", this)
+.then(() => console.log("Email sent successfully!"))
+.catch(err => console.error("Failed to send email:", err));
+});
+
+</script>
+</body>
+
+</html>
+
+
+
+
