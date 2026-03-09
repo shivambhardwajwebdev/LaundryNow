@@ -180,7 +180,7 @@
             <button type="submit" class="BookingButton">Book Now</button>
 
             </form>
-            <div class="status"></div>
+            <div class="statusbox"><h4 class="status"></h4></div>
             </div>
         </div>
         </div>
@@ -232,6 +232,7 @@ const table = document.querySelector(".cartTable");
 const amount=document.querySelector(".totalAmountofCart");
 const addButton=document.querySelectorAll(".addButton");
 const removeButton=document.querySelectorAll(".removeButton");
+const status = document.querySelector(".status");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let nextid = cart.length > 0 ? cart[cart.length - 1][0] + 1 : 1;
 window.onload = function () {
@@ -371,16 +372,44 @@ listitem.value=JSON.stringify(cart);
         publicKey: "K7wGkytqu6FhOa-Ah",
       });
    })();
-const status =document.getElementsByClassName("status");
 document.getElementById("contact-me").addEventListener("submit", function(e) {
 e.preventDefault();
 
-
 emailjs.sendForm("service_fmaa7vq", "template_apv3g1h", this)
-.then(() => console.log("Email sent successfully!"))
-.catch(err => console.error("Failed to send email:", err));
-});
+.then(() => {
+    console.log("Email sent successfully!");
+    status.innerText = "Email Sent Successfully!";
+    status.classList.add("success");
+//after successfully sending email i set everything to start 
+    // ✅ 1. Clear cart data
+    cart = [];
+    localStorage.removeItem("cart");
 
+    // ✅ 2. Clear table rows (except header)
+    const rows = document.querySelectorAll(".cartTable tr");
+    rows.forEach((row, index) => {
+        if (index !== 0) row.remove(); // keep header
+    });
+
+    // ✅ 3. Reset total
+    amount.innerText = "₹ 0";
+
+    // ✅ 4. Reset all buttons
+    addButton.forEach(btn => btn.classList.remove("none"));
+    removeButton.forEach(btn => btn.classList.add("none"));
+
+    // ✅ 5. Clear hidden cart field
+    document.getElementById("listitem").value = "";
+
+    // ✅ 6. Optional: reset form
+    document.getElementById("contact-me").reset();
+})
+.catch((err) => {
+    console.error("Failed to send email:", err);
+    status.innerText = "Unable to send Email! Please Try Again";
+    status.classList.add("error");
+})
+});
 </script>
 </body>
 
